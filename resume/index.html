@@ -1,5 +1,180 @@
-<p>
-    <a href="mia-tran-resume.pdf" target="_blank">
-        View my resume as a PDF
-    </a>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Anh Tran</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <a href="../">Home</a>
+        <a href="../projects/">Projects</a>
+        <a href="../contact/">Contact</a>
+        <a href="../resume/">Resume</a>
+        <a href="https://github.com/miatrn20" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <header>
+        <h1>Anh Ngo Nguyen Tran</h1>
+        <address>
+            San Diego, CA |
+            <a href="tel:+14705384524">(470) 538-4524</a> |
+            <a href="mailto:nnt003@ucsd.edu">nnt003@ucsd.edu</a> |
+            <a href="https://www.linkedin.com/in/anh-tran-0a347018a/" target="_blank" rel="noopener">LinkedIn</a>
+        </address>
+
+        <p>
+            Data Science student with experience building data pipelines, predictive models,
+            and analytics solutions using Python and SQL. Hands-on experience across data
+            engineering, machine learning, and large-scale data analysis, with interests in
+            data engineering, cloud infrastructure, and data-driven business solutions.
+        </p>
+
+        <p>
+            <a href="mia-tran-resume.pdf" target="_blank" rel="noopener">
+                View my resume as a PDF
+            </a>
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Education</h2>
+
+            <article>
+                <h3>University of California, San Diego</h3>
+                <p>B.S. Data Science, Minor in Business Analytics and Mathematics</p>
+                <p>Expected <time datetime="2028-03">March 2028</time></p>
+                <p>Honors: Provost Honors</p>
+            </article>
+
+            <article>
+                <h3>De Anza College</h3>
+                <p>A.S. Mathematics; A.S. Economics</p>
+                <p>
+                    <time datetime="2023-01">January 2023</time> -
+                    <time datetime="2025-03">March 2025</time>
+                </p>
+                <p>GPA: 3.98/4.00 | Honors: Dean's List, All Quarters</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Technical:</strong> Python (pandas, NumPy, scikit-learn, XGBoost), SQL, PostgreSQL, Go, Docker, REST APIs, GeoPandas</li>
+                <li><strong>Data:</strong> ETL, data pipelines, data modeling, machine learning, feature engineering</li>
+                <li><strong>Tools:</strong> Tableau, Excel, Git/GitHub, Jupyter, Streamlit</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+
+            <article>
+                <header>
+                    <h3>Data Engineer Intern - NeuroLeap Corp</h3>
+                    <p><time datetime="2026-06">June 2026</time> - Present</p>
+                </header>
+                <ul>
+                    <li>Built and maintain the NeuroLeap backend using Go, PostgreSQL, Docker, and REST APIs, including user authentication and database migration/deployment workflows.</li>
+                    <li>Designing a wide/OBT (one-big-table) schema that transforms raw motion records into ML-ready features for analytics and model development.</li>
+                    <li>Developed motion-data processing and validation pipelines to parse, normalize, and clean sensor CSV/TXT files, with automated bad-row detection and rejected-record reporting.</li>
+                </ul>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Data Scientist Intern - IDX Exchange</h3>
+                    <p>
+                        <time datetime="2026-06">June 2026</time> -
+                        <time datetime="2026-09">September 2026</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Developed an end-to-end machine learning pipeline using nearly 800K CRMLS property records to predict California single-family home sale prices.</li>
+                    <li>Trained and optimized a CatBoost regressor on 128K+ properties, achieving R<sup>2</sup> = 0.904 and 8.55% median absolute percentage error on an untouched test set.</li>
+                    <li>Benchmarked Linear Regression, Decision Tree, Random Forest, XGBoost, and CatBoost, reducing MAE by 9.7% versus tuned XGBoost through model selection and feature engineering.</li>
+                    <li>Built a leakage-aware, time-based preprocessing pipeline and enriched property data through GeoPandas spatial joins with California school-district boundaries, alongside missingness indicators, log transformations, and ratio features.</li>
+                </ul>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Data Analyst Intern - IDX Exchange</h3>
+                    <p>
+                        <time datetime="2026-03">March 2026</time> -
+                        <time datetime="2026-06">June 2026</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Cleaned and validated 1.38M+ MLS listing and sold-property records in Python and SQL, flagging 878,796 records (63.6%) for missing values, invalid dates, or outliers.</li>
+                    <li>Built 2 interactive Tableau dashboards (Market Analysis, Competitive Analysis) and delivered a 1-page Market Intelligence Report distilling 3-5 data-driven insights for stakeholders.</li>
+                    <li>Engineered market metrics (price ratio, price-per-sq-ft, days on market) and applied IQR-based statistical outlier removal to improve dataset reliability ahead of dashboarding.</li>
+                </ul>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Undergraduate Research Assistant, Economics Lab - UC San Diego</h3>
+                    <p>
+                        <time datetime="2026-04">April 2026</time> -
+                        <time datetime="2026-06">June 2026</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Supported the Talen Project (advised by Dr. Idaliya Grigoryeva), cleaning and validating academic/demographic datasets in Python and Excel to examine student achievement and socioeconomic factors behind hidden academic potential.</li>
+                    <li>Reviewed and synthesized 30+ academic papers and datasets, extracting key variables and methods that shaped the research analytical framework.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <article>
+                <header>
+                    <h3>Google Reviews LocalLens - Data Science Student Society, UCSD</h3>
+                    <p>
+                        <time datetime="2026-01">January 2026</time> -
+                        <time datetime="2026-03">March 2026</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Analyzed 1M+ Google Maps reviews and business metadata across U.S. cities and categories to compare customer sentiment, business quality, and market opportunity.</li>
+                    <li>Built an opportunity-scoring model using rating patterns, review volume, and competition levels to surface underserved market segments for potential business entry.</li>
+                    <li>Standardized and engineered 3,000+ overlapping business categories across a multi-GB dataset, enabling apples-to-apples cross-market comparison; presented findings at UCSD DS3 DINO CAGE.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Additional Experience</h2>
+
+            <article>
+                <header>
+                    <h3>ITS Student Technician - UC San Diego</h3>
+                    <p><time datetime="2026-08">August 2026</time> - Present</p>
+                </header>
+                <ul>
+                    <li>Troubleshoot and resolve hardware, software, account-access, networking, and campus-system issues across phone, ticketing, and onsite support channels for UC San Diego's 40,000+ users.</li>
+                </ul>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Club President - Mathematical Investment and Trading Society (MITS)</h3>
+                    <p>
+                        <time datetime="2024-06">June 2024</time> -
+                        <time datetime="2025-03">March 2025</time>
+                    </p>
+                </header>
+                <ul>
+                    <li>Led a 6-officer team to launch the club's first stock-analysis competition, creating a new hands-on investing track for members.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
