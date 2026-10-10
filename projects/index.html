@@ -7,15 +7,37 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Primary navigation">
         <a href="../">Home</a>
-        <a href="../projects/">Projects</a>
+        <a class="current" href="./" aria-current="page">Projects</a>
         <a href="../contact/">Contact</a>
-        <a href="https://github.com/miatrn20" target="_blank">GitHub</a>
         <a href="../resume/">Resume</a>
+        <a href="https://github.com/miatrn20" target="_blank" rel="noopener">GitHub</a>
     </nav>
 
-    <h1>Projects</h1>
-    <p>My projects will appear here.</p>
+    <main>
+        <header class="page-header">
+            <p class="eyebrow">Coursework and experiments</p>
+            <h1>Projects</h1>
+            <p class="lede">A growing collection of data science, visualization, and analytics work.</p>
+        </header>
+
+        <div class="projects">
+            <article><h2>LocalLens Reviews</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Analyzing Google Maps reviews and business metadata to identify customer sentiment and market opportunities.</p></article>
+            <article><h2>California Home Prices</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>A machine learning pipeline for predicting single-family home sale prices from large-scale property data.</p></article>
+            <article><h2>Real Estate Market Analysis</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Interactive Tableau dashboards for exploring market conditions, competition, and pricing patterns.</p></article>
+            <article><h2>Motion Data Pipeline</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Processing and validating sensor records to create reliable, machine-learning-ready features.</p></article>
+            <article><h2>Academic Potential Study</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Cleaning academic and demographic datasets to study achievement and socioeconomic factors.</p></article>
+            <article><h2>Customer Sentiment</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Comparing review patterns across cities and categories to understand customer experience.</p></article>
+            <article><h2>Competitive Analysis</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Evaluating market competition with pricing, inventory, and location-based indicators.</p></article>
+            <article><h2>Feature Engineering Study</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Testing transformations, missingness indicators, and ratio features for predictive modeling.</p></article>
+            <article><h2>Geospatial School Analysis</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Using spatial joins to connect California properties with their school-district boundaries.</p></article>
+            <article><h2>Data Quality Report</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Detecting missing values, invalid dates, and statistical outliers in large property datasets.</p></article>
+            <article><h2>Business Opportunity Score</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>Combining ratings, review volume, and competition levels to surface underserved segments.</p></article>
+            <article><h2>DSC 106 Portfolio</h2><img src="../image/project-placeholder.svg" alt="Abstract chart illustration"><p>A responsive, multi-page portfolio built with semantic HTML, Flexbox, Grid, and subgrid.</p></article>
+        </div>
+    </main>
+
+    <footer><p>© 2026 Anh (Mia) Tran</p></footer>
 </body>
 </html>

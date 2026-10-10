@@ -7,32 +7,41 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
+    <nav aria-label="Primary navigation">
         <a href="../">Home</a>
         <a href="../projects/">Projects</a>
-        <a href="../contact/">Contact</a>
-        <a href="https://github.com/miatrn20" target="_blank">GitHub</a>
+        <a class="current" href="./" aria-current="page">Contact</a>
         <a href="../resume/">Resume</a>
+        <a href="https://github.com/miatrn20" target="_blank" rel="noopener">GitHub</a>
     </nav>
 
-    <h1>Contact</h1>
-    <form action="mailto:nnt003@ucsd.edu" method="POST" enctype="text/plain">
-    <label>
-        Your email:
-        <input type="email" name="email" value="example@example.com">
-    </label>
+    <main>
+        <header class="page-header">
+            <p class="eyebrow">Let’s connect</p>
+            <h1>Contact</h1>
+            <p class="lede">Send me a message about data, projects, or opportunities.</p>
+        </header>
 
-    <label>
-        Subject:
-        <input name="subject" value="Hello">
-    </label>
+        <form action="mailto:nnt003@ucsd.edu" method="POST" enctype="text/plain">
+        <label>
+            Your email
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+        </label>
 
-    <label>
-        Message:
-        <textarea name="body">Write your message here.</textarea>
-    </label>
+        <label>
+            Subject
+            <input name="subject" placeholder="What would you like to discuss?" required>
+        </label>
 
-    <button>Send</button>
-</form>
+        <label>
+            Message
+            <textarea name="body" rows="7" placeholder="Write your message here…" required></textarea>
+        </label>
+
+        <button type="submit">Send message</button>
+        </form>
+    </main>
+
+    <footer><p>© 2026 Anh (Mia) Tran</p></footer>
 </body>
 </html>
