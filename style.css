@@ -463,3 +463,38 @@ footer p {
         padding: 0;
     }
 }
+
+
+/* Lab 3: Automatic light/dark mode */
+html {
+    color-scheme: light dark;
+}
+
+/* Theme switcher position */
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+}
+
+/* Make dropdown inherit font */
+.color-scheme select {
+    font: inherit;
+}
+
+/* Highlight current navigation link */
+nav a.current {
+    border-bottom: 0.4em solid;
+    border-bottom-color: var(--color-accent, currentColor);
+}
+
+/* Make navigation borders softer in dark mode */
+nav {
+    --border-color: oklch(50% 10% 200 / 40%);
+}
+
+nav a {
+    border-bottom-color: var(--border-color);
+}
+

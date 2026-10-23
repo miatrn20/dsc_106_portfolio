@@ -1,50 +1,78 @@
-console.log('IT\u2019S ALIVE!');
 
+console.log("IT'S ALIVE!");
+
+// Step 1: Helper function
 function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
 
-const pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume/', title: 'Resume' },
-    { url: 'https://github.com/miatrn20', title: 'GitHub' },
+// Step 3: Navigation menu
+
+// Change this if your GitHub Pages repository has a different name
+const BASE_PATH =
+    (location.hostname === "localhost" ||
+     location.hostname === "127.0.0.1")
+        ? "/"
+        : "/dsc_106_portfolio/";
+
+// Pages on your website
+let pages = [
+    { url: "", title: "Home" },
+    { url: "projects/", title: "Projects" },
+    { url: "contact/", title: "Contact" },
+    { url: "resume/", title: "Resume" },
+    {
+        url: "https://github.com/miatrn20",
+        title: "GitHub"
+    }
 ];
 
-const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-const BASE_PATH = isLocal ? '/' : '/dsc_106_portfolio/';
-
-const nav = document.createElement('nav');
-nav.setAttribute('aria-label', 'Primary navigation');
+// Create the navigation element
+let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-for (const page of pages) {
-    const url = page.url.startsWith('http') ? page.url : BASE_PATH + page.url;
-    const link = document.createElement('a');
+// Create a link for every page
+for (let p of pages) {
+    let url = p.url;
+    let title = p.title;
 
-    link.href = url;
-    link.textContent = page.title;
-
-    const isCurrent = link.host === location.host && link.pathname === location.pathname;
-    link.classList.toggle('current', isCurrent);
-    if (isCurrent) {
-        link.setAttribute('aria-current', 'page');
+    // Adjust links for local server or GitHub Pages
+    if (!url.startsWith("http")) {
+        url = BASE_PATH + url;
     }
 
-    if (link.host !== location.host) {
-        link.target = '_blank';
-        link.rel = 'noopener';
+    // Create the link
+    let a = document.createElement("a");
+    a.href = url;
+    a.textContent = title;
+
+    // Highlight the current page
+    if (
+        a.host === location.host &&
+        a.pathname === location.pathname
+    ) {
+        a.classList.add("current");
+        a.setAttribute("aria-current", "page");
     }
 
-    nav.append(link);
+    // Open external links in a new tab
+    if (a.host !== location.host) {
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+    }
+
+    // Add the link to the navigation menu
+    nav.append(a);
 }
 
+// Step 4: Dark mode switcher
+
+// Create the theme dropdown
 document.body.insertAdjacentHTML(
-    'afterbegin',
+    "afterbegin",
     `<label class="color-scheme">
         Theme:
-        <select aria-label="Choose color scheme">
+        <select>
             <option value="light dark">Automatic</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
@@ -82,4 +110,54 @@ form?.addEventListener('submit', (event) => {
     }
 
     location.href = `${form.action}?${parameters.join('&')}`;
+
+
 });
+
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {  containerElement.innerHTML = '';
+  for (const project of projects) {
+    const article = document.createElement('article');
+
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+
+    containerElement.append(article);
+  }
+  
+}
+
+
+
+export async function fetchGitHubData(username) {
+    const url = `https://api.github.com/users/${username}`;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error(`GitHub API request failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    return data;
+}

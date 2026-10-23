@@ -1,0 +1,75 @@
+[
+  {
+    "title": "LocalLens Reviews",
+    "year": 2026,
+    "image": "../image/project-placeholder.svg",
+    "description": "Analyzing Google Maps reviews and business metadata to identify customer sentiment and market opportunities."
+  },
+  {
+    "title": "California Home Prices",
+    "image": "../image/project-placeholder.svg",
+    "year": 2026,
+    "description": "A machine learning pipeline for predicting single-family home sale prices from large-scale property data."
+  },
+  {
+    "title": "Real Estate Market Analysis",
+    "image": "../image/project-placeholder.svg",
+    "year": 2026,
+    "description": "Interactive Tableau dashboards for exploring market conditions, competition, and pricing patterns."
+    
+  },
+  {
+    "title": "Motion Data Pipeline",
+    "image": "../image/project-placeholder.svg",
+    "year": 2025,
+    "description": "Processing and validating sensor records to create reliable, machine-learning-ready features."
+  },
+  {
+    "title": "Academic Potential Study",
+    "image": "../image/project-placeholder.svg",
+    "year": 2025,
+    "description": "Cleaning academic and demographic datasets to study achievement and socioeconomic factors."
+  },
+  {
+    "title": "Customer Sentiment",
+    "year": 2025,
+    "image": "../image/project-placeholder.svg",
+    "description": "Comparing review patterns across cities and categories to understand customer experience."
+  },
+  {
+    "title": "Competitive Analysis",
+    "year": 2026,
+    "image": "../image/project-placeholder.svg",
+    "description": "Evaluating market competition with pricing, inventory, and location-based indicators."
+  },
+  {
+    "title": "Feature Engineering Study",
+    "year": 2024,
+    "image": "../image/project-placeholder.svg",
+    "description": "Testing transformations, missingness indicators, and ratio features for predictive modeling."
+  },
+  {
+    "title": "Geospatial School Analysis",
+    "year": 2024,
+    "image": "../image/project-placeholder.svg",
+    "description": "Using spatial joins to connect California properties with their school-district boundaries."
+  },
+  {
+    "title": "Data Quality Report",
+    "year": 2023,
+    "image": "../image/project-placeholder.svg",
+    "description": "Detecting missing values, invalid dates, and statistical outliers in large property datasets."
+  },
+  {
+    "title": "Business Opportunity Score",
+    "year": 2024,
+    "image": "../image/project-placeholder.svg",
+    "description": "Combining ratings, review volume, and competition levels to surface underserved segments."
+  },
+  {
+    "title": "DSC 106 Portfolio",
+    "year": 2026,
+    "image": "../image/project-placeholder.svg",
+    "description": "A responsive, multi-page portfolio built with semantic HTML, Flexbox, Grid, and subgrid."
+  }
+]

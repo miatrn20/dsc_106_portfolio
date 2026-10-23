@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,21 +16,42 @@
             <p class="lede">Send me a message about data, projects, or opportunities.</p>
         </header>
 
-        <form action="mailto:nnt003@ucsd.edu">
-        <label>
-            Subject
-            <input name="subject" placeholder="What would you like to discuss?" required>
-        </label>
+        <form action="mailto:nnt003@ucsd.edu"
+              method="POST"
+              enctype="text/plain">
+            <label>
+                Your email
+                <input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                    required>
+            </label>
 
-        <label>
-            Message
-            <textarea name="body" rows="7" placeholder="Write your message here…" required></textarea>
-        </label>
+            <label>
+                Subject
+                <input
+                    name="subject"
+                    placeholder="What would you like to discuss?"
+                    required>
+            </label>
 
-        <button type="submit">Send message</button>
+            <label>
+                Message
+                <textarea
+                    name="body"
+                    rows="7"
+                    placeholder="Write your message here…"
+                    required></textarea>
+            </label>
+
+            <button type="submit">Send message</button>
         </form>
     </main>
 
-    <footer><p>© 2026 Anh (Mia) Tran</p></footer>
+    <footer>
+        <p>© 2026 Anh (Mia) Tran</p>
+    </footer>
 </body>
 </html>
